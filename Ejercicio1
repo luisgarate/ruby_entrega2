@@ -1,0 +1,77 @@
+Module Camina
+	def caminar
+		puts "camina"
+	end
+end
+Module Nada
+	def nadar
+		puts "nada"
+	end
+end
+Module Desplazarse
+	def desplazarser
+		puts "se desplaza"
+	end
+end
+
+class Mamifero; include Camina,Nada;end
+
+class Hombre<Mamifero
+	def hablar
+		puts "habla"
+	end
+end
+class Perro<Mamifero
+	def ladrar
+		puts "ladra"
+	end
+end
+class Ballena<Mamifero
+end
+
+class Ave; include Camina
+end
+class Aguila<Ave 
+	def volar
+		puts "vuela"
+	end
+end
+class Pinguino<Ave
+	include Nada
+end
+
+
+class Reptiles
+end
+class Cocodrilo<Reptiles
+	include Camina,Nada
+end
+class Boa<Reptiles
+	include Desplazarse
+	def presion
+		puts "presiona"
+	end
+
+end
+class Cobra<Reptiles
+	include Desplazarse
+	def morder
+		puts "muerde"
+	end
+end
+
+class Anfibio
+	include Nada
+end
+class Sapo<Anfibio
+	def saltar
+		puts "salta"
+	end
+end
+
+
+class Peces
+	include Nada
+end
+class Tiburon<Peces
+end
